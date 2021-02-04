@@ -1,8 +1,8 @@
-import VideoListEntry from "/compiled/src/components/VideoListEntry.js"
+import VideoListEntry from '/compiled/src/components/VideoListEntry.js';
 
-var VideoList = (props) => (
+var VideoList = ({videos}) => (
   <div className="video-list">
-    {props.videos.map(video => <VideoListEntry video={video}/>)}
+    {videos.map(video => <VideoListEntry key={video.id.videoId} video={video}/>)}
     {/* <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
