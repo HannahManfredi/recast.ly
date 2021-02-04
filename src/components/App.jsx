@@ -1,3 +1,6 @@
+import exampleVideoData from "/compiled/src/data/exampleVideoData.js";
+import VideoList from "/compiled/src/components/VideoList.js"
+
 var App = () => (
   <div>
     <nav className="navbar">
@@ -10,7 +13,8 @@ var App = () => (
         <div><h5><em>videoPlayer</em> view goes here</h5></div>
       </div>
       <div className="col-md-5">
-        <div><h5><em>videoList</em> view goes here</h5></div>
+        {/* <div><h5><em>videoList</em> view goes here</h5></div> */}
+        <VideoList videos={exampleVideoData} />
       </div>
     </div>
   </div>
@@ -22,7 +26,6 @@ export default App;
 
 //this is the big daddy component that defines the layout of other child components: search, videoPlayer, videoList
 //what holds state?
-  //the search bar holds state
-    //videoList: whatever the youtube API returns based on our search responds to whatever we search for
-  //videoPlayer responds to user button click
-
+//the search bar holds state
+//videoList: whatever the youtube API returns based on our search responds to whatever we search for
+//videoPlayer responds to user button click

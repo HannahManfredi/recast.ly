@@ -1,10 +1,13 @@
-var VideoList = () => (
+import VideoListEntry from "/compiled/src/components/VideoListEntry.js"
+
+var VideoList = (props) => (
   <div className="video-list">
+    {props.videos.map(video => <VideoListEntry video={video}/>)}
+    {/* <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+    <div><h5><em>videoListEntry</em> view goes here</h5></div> */}
   </div>
 );
 
@@ -19,6 +22,7 @@ VideoList.propTypes = {
 export default VideoList;
 
 //videos will come from YT Api?
-  //sends a data object via http
-    //we will look at that object
-      //render it here
+//sends a data object via http
+//we will look at that object
+//render it here
+
