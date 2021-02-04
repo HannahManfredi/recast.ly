@@ -6,10 +6,12 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
+    "start": "live-server --open=./index.html",
     "test": "live-server --open=./SpecRunner.html --port=8081",
     "postinstall": "curl -s https://raw.githubusercontent.com/reactorcore/pomander/master/bin/install | bash"
   },
   "dependencies": {
+    "babel-watch": "^7.3.1",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1 ",
     "lodash": "^4.17.20",

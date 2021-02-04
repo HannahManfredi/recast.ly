@@ -19,3 +19,10 @@ var App = () => (
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
 export default App;
+
+//this is the big daddy component that defines the layout of other child components: search, videoPlayer, videoList
+//what holds state?
+  //the search bar holds state
+    //videoList: whatever the youtube API returns based on our search responds to whatever we search for
+  //videoPlayer responds to user button click
+
