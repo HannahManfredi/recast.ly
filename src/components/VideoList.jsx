@@ -1,8 +1,8 @@
 import VideoListEntry from '/compiled/src/components/VideoListEntry.js';
 
-var VideoList = ({videos}) => (
+var VideoList = ({videos, updateVideo}) => ( //{videos}
   <div className="video-list">
-    {videos.map(video => <VideoListEntry key={video.id.videoId} video={video}/>)}
+    {videos.map(video => <VideoListEntry key={video.id.videoId} video={video} updateVideo={updateVideo}/>)}
     {/* <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
