@@ -63,10 +63,10 @@ class App extends React.Component {
 // );
 
 //make this an ES6 class component
-  //App should be stateful: how do we get exampleVideoData to live in App's state??
-  //it has a function that lives on it so we can pass it to children and update state on App
-    //in App's state we need to create something that renders the list
-    //and something that renders the current video
+//App should be stateful: how do we get exampleVideoData to live in App's state??
+//it has a function that lives on it so we can pass it to children and update state on App
+//in App's state we need to create something that renders the list
+//and something that renders the current video
 
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope
