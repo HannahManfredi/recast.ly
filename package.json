@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "start": "live-server --open=./index.html",
+    "start": "npx live-server --open=./index.html --port=5050 & npx babel . --watch --out-dir compiled --presets=@babel/preset-react --ignore=node_modules,compiled --source-maps inline",
     "test": "live-server --open=./SpecRunner.html --port=8081",
     "postinstall": "curl -s https://raw.githubusercontent.com/reactorcore/pomander/master/bin/install | bash"
   },

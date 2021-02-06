@@ -11,11 +11,17 @@ class App extends React.Component {
       currentVideo: exampleVideoData[0]
       //we need something to store our current video in our state
     };
+    //bind our updateVideo functio  to App
+    this.updateVideo = this.updateVideo.bind(this);
+    console.log('this.updateVideo: ', this.updateVideo);
+    console.log('this.updateVideo.bind(this)', this.updateVideo.bind(this));
   }
 
   updateVideo(newVideo) {
     //update this.state.currentVideo based on which title we click on
-    this.setState({ //we're getting an error because where we're invoking updateVideo doesn't know what this is
+    this.setState({ //we're getting an error because wherea we're invoking updateVideo doesn't know what this is
+      //could be a binding issue?
+      //define what this is
       currentVideo: newVideo
     });
 
@@ -24,7 +30,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {console.log('this: ', this)};
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
             <div><h5><em>search</em> view goes here</h5></div>
