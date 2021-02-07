@@ -4,14 +4,11 @@ import VideoPlayer from './VideoPlayer.js';
 import YOUTUBE_API_KEY from '../config/youtube.js';
 import Search from './Search.js';
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      videoData: exampleVideoData,
-      currentVideo: exampleVideoData[0]
-      // videoData: [],
-      // currentVideo: {}
+      videoData: [],
+      currentVideo: {}
     };
     this.wrapper = this.wrapper.bind(this);
     this.setInitialVideoData = this.setInitialVideoData.bind(this);
@@ -22,20 +19,6 @@ class App extends React.Component {
     this.wrapper('cat');
   }
 
-  updateVideo(newVideo) {
-    this.setState({
-      currentVideo: newVideo
-    });
-  }
-
-  setInitialVideoData(data) {
-    console.log('setInitialVideoData data: ', data.items[0])
-    this.setState({
-      videoData: data.items,
-      currentVideo: data.items[0]
-    });
-  }
-
   wrapper(query) {
     var optionsObj = {
       query: query,
@@ -43,10 +26,23 @@ class App extends React.Component {
       key: YOUTUBE_API_KEY
     };
     this.props.searchYouTube(optionsObj, (data) => {
-      console.log(data.items);
       this.setInitialVideoData(data);
     });
   }
+
+  updateVideo(newVideo) {
+    this.setState({
+      currentVideo: newVideo
+    });
+  }
+
+  setInitialVideoData(data) {
+    this.setState({
+      videoData: data,
+      currentVideo: data[0]
+    });
+  }
+
 
   render() {
     return (
