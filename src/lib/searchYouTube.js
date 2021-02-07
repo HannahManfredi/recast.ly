@@ -1,7 +1,6 @@
 import YOUTUBE_API_KEY from '../config/youtube.js';
 
 var searchYouTube = (options, callback) => {
-  console.log('function called ');
   $.ajax({
     type: 'GET',
     url: 'https://www.googleapis.com/youtube/v3/search',

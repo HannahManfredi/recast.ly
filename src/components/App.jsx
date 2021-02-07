@@ -42,9 +42,9 @@ class App extends React.Component {
       currentVideo: data[0]
     });
   }
-
-
+  // https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ogimage.png
   render() {
+    console.log(this.state);
     return (
       <div>
         <nav className="navbar">
